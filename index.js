@@ -1,9 +1,21 @@
 const Joi = require('joi');
+const logger = require('./logger');
 const express = require('express')
 const app = express(); //we are giving our app the powers of express!
 //expressjs.com 
 
-app.use(express.json()); //what we're doing here is adding the middleware 
+//MIDDLEWARE
+//middleware function is a function that takes a request object and either returns a response to the client or passes control to another middleware function
+//an express app is simply a bunch of middleware functions
+app.use(express.json()); //sets req.body using Parse 
+
+app.use(logger);
+
+app.use(function(req, res, next) {
+    console.log('Authenticating...');
+    next(); 
+});
+
 
 const courses = [
     { id: 1, name: 'course1'},

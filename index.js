@@ -23,9 +23,9 @@ app.use('/api/courses', courses);
 app.use('/', home); //any apps that start with / use the home router
 
 //CONFIGURATION 
-console.log('Application Name: ' + config.get('name')); 
-console.log('Mail Server: ' + config.get('mail.host')); 
-console.log('Mail Password: ' + config.get('mail.password')); //this is read from an environment variable, not a configuration file
+// console.log('Application Name: ' + config.get('name')); 
+// console.log('Mail Server: ' + config.get('mail.host')); 
+// console.log('Mail Password: ' + config.get('mail.password')); //this is read from an environment variable, not a configuration file
 
 //ENVIRONMENT
 //below is how you can tell if your code is running on a development, testing, staging, or production machine

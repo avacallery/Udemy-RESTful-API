@@ -2,7 +2,6 @@ const debug = require('debug')('app:startup'); //we get a function for debugging
 const config = require('config'); //organizes hierarchial configurations for your app deployment environments (development, qa, staging, production)
 const morgan = require('morgan'); //HTTP request logger
 const helmet = require('helmet'); //Helps secure your apps by setting various HTTP headers.
-const Joi = require('joi');
 const logger = require('./middleware/logger');
 const courses = require('./routes/courses');
 const home = require('./routes/home')

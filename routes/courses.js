@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();  
+const Joi = require('joi');
+
 //instead of working with the app object, we are working with the router object
 
 const courses = [
